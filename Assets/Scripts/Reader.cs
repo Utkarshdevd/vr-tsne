@@ -17,7 +17,8 @@ public class Reader : MonoBehaviour {
             float.TryParse(row[1], out dp.x);
             float.TryParse(row[2], out dp.y);
             float.TryParse(row[3], out dp.z);
-            Debug.Log(dp.GetVector());
+            Vector3 vec = dp.GetVector() + Constants.Instance.origin;
+            Debug.Log(vec + "---" + dp.GetVector()+ "" +Constants.Instance.origin);
             datapoints.Add(dp);
         }
     }

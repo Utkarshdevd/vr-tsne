@@ -292,9 +292,11 @@
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
+     <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\DataPoint.cs" />
      <Compile Include="Assets\Scripts\MyPlayerController.cs" />
      <Compile Include="Assets\Scripts\Reader.cs" />
+     <Compile Include="Assets\Scripts\Singleton.cs" />
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
      <None Include="Assets\Oculus\VR\Resources\OVRMRUnlitTransparent.shader" />
