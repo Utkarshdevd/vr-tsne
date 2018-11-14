@@ -6,14 +6,22 @@ public class MyPlayerController : MonoBehaviour {
 
     public int speed = 0;
 
+	void Awake(){
+		// add listners
+		Debug.Log("Called");
+		Reader.Instance.OnLoadData += drawIt;
+	}
+
+	void OnDisable(){
+		// remove listners
+	}
 	// Use this for initialization
 	void Start () {
-		
+		// Load default data or load selection screen
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(Input.GetJoystickNames());
 		if(Input.GetJoystickNames() == null){
 			// get input data from keyboard or controller
 			float moveHorizontal = Input.GetAxis("Horizontal");
@@ -25,6 +33,7 @@ public class MyPlayerController : MonoBehaviour {
 			transform.position = position;
 		}
 		else{
+			Debug.Log("GOT RIFT/VR");
 			string[] a = Input.GetJoystickNames();
 			for(int i = 0; i < a.Length; i++) {
       			Debug.Log(a[i]);
@@ -38,6 +47,16 @@ public class MyPlayerController : MonoBehaviour {
 			position.z += moveVertical * speed * Time.deltaTime;
 			transform.position = position;
 		}
-		
+	}
+
+	void drawIt(List<DataPoint> dataPoints){
+		Debug.Log("added");
+		Debug.Log(dataPoints.Count);
+		foreach(DataPoint dp in dataPoints){
+			// get current prefab
+			GameObject unit = Resources.Load("Prefabs/BasicSphere") as GameObject;
+			// position it
+			Instantiate(unit, dp.GetVector(), new Quaternion(0,0,0,0));
+		}
 	}
 }
