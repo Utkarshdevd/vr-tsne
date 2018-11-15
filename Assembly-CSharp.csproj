@@ -292,6 +292,7 @@
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
      <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
+     <Compile Include="Assets\Scripts\BlockMat.cs" />
      <Compile Include="Assets\Scripts\Constants.cs" />
      <Compile Include="Assets\Scripts\DataPoint.cs" />
      <Compile Include="Assets\Scripts\MyPlayerController.cs" />
@@ -304,6 +305,7 @@
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_Loader.shader" />
      <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShader.shader" />
+     <None Include="Assets\Resources\Prefabs\block.shader" />
      <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
      <None Include="Assets\Oculus\VR\Resources\OVRMRUnlit.shader" />

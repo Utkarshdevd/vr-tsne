@@ -33,7 +33,7 @@ public class MyPlayerController : MonoBehaviour {
 			transform.position = position;
 		}
 		else{
-			Debug.Log("GOT RIFT/VR");
+			// Debug.Log("GOT RIFT/VR");
 			string[] a = Input.GetJoystickNames();
 			for(int i = 0; i < a.Length; i++) {
       			Debug.Log(a[i]);
@@ -49,14 +49,24 @@ public class MyPlayerController : MonoBehaviour {
 		}
 	}
 
-	void drawIt(List<DataPoint> dataPoints){
+	void drawIt(List<DataPoint> dataPoints, Dictionary<string, int> labelDict){
 		Debug.Log("added");
+		// PrintDict(labelDict);
 		Debug.Log(dataPoints.Count);
 		foreach(DataPoint dp in dataPoints){
 			// get current prefab
-			GameObject unit = Resources.Load("Prefabs/BasicSphere") as GameObject;
+			GameObject unit = Resources.Load("Prefabs/BasicSphere2") as GameObject;
 			// position it
-			Instantiate(unit, dp.GetVector(), new Quaternion(0,0,0,0));
+			GameObject newObj = Instantiate(unit, dp.GetVector(), new Quaternion(0,0,0,0));
+			newObj.GetComponent<BlockMat>().AddColor((float)(dp.GetFloatLabel()/labelDict.Count));
+			//newObj.GetComponent<Renderer>().sharedMaterial.color = new Color(0,(dp.GetFloatLabel()/labelDict.Count)*1,0,1.0f);
 		}
 	}
+
+	void PrintDict(Dictionary<string, int> DICT){
+		foreach (KeyValuePair<string, int> pair in DICT) {
+			Debug.LogFormat("{0} : {1}", pair.Key, pair.Value);
+		}
+    }
+	
 }

@@ -11,6 +11,15 @@ public class DataPoint{
     public string label;
 
     public Vector3 GetVector(){
-        return new Vector3(x, y, z);
+        Vector3 pos = new Vector3(x, y, z);
+        Debug.LogFormat("{0}=={1}", pos, Constants.Instance.minRad);
+        //pos = Vector3.Scale(pos, Constants.Instance.minRad);
+        return pos*10;
+    }
+
+    public float GetFloatLabel(){
+        float labelfloat = -1;
+        float.TryParse(label, out labelfloat);
+        return labelfloat;
     }
 }
