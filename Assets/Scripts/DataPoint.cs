@@ -13,8 +13,8 @@ public class DataPoint{
     public Vector3 GetVector(){
         Vector3 pos = new Vector3(x, y, z);
         Debug.LogFormat("{0}=={1}", pos, Constants.Instance.minRad);
-        //pos = Vector3.Scale(pos, Constants.Instance.minRad);
-        return pos*10;
+        pos = Vector3.Scale(pos, Constants.Instance.minRad);
+        return pos;
     }
 
     public float GetFloatLabel(){

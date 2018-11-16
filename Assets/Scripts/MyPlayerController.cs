@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MyPlayerController : MonoBehaviour {
 
-    public int speed = 0;
-
+    public int speed = 1;
+	public Transform PointsParent;
 	void Awake(){
 		// add listners
 		Debug.Log("Called");
+		PointsParent = GameObject.Find("Points").transform;
 		Reader.Instance.OnLoadData += drawIt;
 	}
 
@@ -47,6 +48,12 @@ public class MyPlayerController : MonoBehaviour {
 			position.z += moveVertical * speed * Time.deltaTime;
 			transform.position = position;
 		}
+		if (Input.GetKey(KeyCode.A)){
+      		PointsParent.Rotate(Vector3.up * speed * Time.deltaTime);
+		}
+      
+		if (Input.GetKey(KeyCode.D))
+			PointsParent.Rotate(-Vector3.up * speed * Time.deltaTime);
 	}
 
 	void drawIt(List<DataPoint> dataPoints, Dictionary<string, int> labelDict){
@@ -60,6 +67,7 @@ public class MyPlayerController : MonoBehaviour {
 			GameObject newObj = Instantiate(unit, dp.GetVector(), new Quaternion(0,0,0,0));
 			newObj.GetComponent<BlockMat>().AddColor((float)(dp.GetFloatLabel()/labelDict.Count));
 			//newObj.GetComponent<Renderer>().sharedMaterial.color = new Color(0,(dp.GetFloatLabel()/labelDict.Count)*1,0,1.0f);
+			newObj.transform.SetParent(PointsParent);
 		}
 	}
 

@@ -576,6 +576,14 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
  </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.Recorder.Editor.csproj">
+      <Project>{4321ECAA-7A64-7865-A7C2-B438B6434693}</Project>      <Name>Unity.Recorder.Editor</Name>    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.csproj">
+      <Project>{600454B5-13CC-362E-97FF-BFDCF152C115}</Project>      <Name>Unity.Recorder</Name>    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Samples.csproj">
+      <Project>{4641AA06-B611-034E-DFF6-DA604A45B9F1}</Project>      <Name>Unity.Recorder.Samples</Name>    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
