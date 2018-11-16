@@ -13,7 +13,10 @@ public class DataPoint{
     public Vector3 GetVector(){
         Vector3 pos = new Vector3(x, y, z);
         Debug.LogFormat("{0}=={1}", pos, Constants.Instance.minRad);
-        pos = Vector3.Scale(pos, Constants.Instance.minRad);
+        if(Constants.Instance.sphere)
+            pos = pos.normalized * Constants.Instance.minSphereRad;
+        else
+            pos = Vector3.Scale(pos, Constants.Instance.minRad);
         return pos;
     }
 

@@ -7,10 +7,13 @@ public class Constants : Singleton<Constants> {
 	//declare constants here
 	public Vector3 origin;
 	public Vector3 minRad;
+	public int minSphereRad;
+	public bool sphere;
 
 	void Awake(){
 		// set constants here
 		origin = new Vector3(1, 1, 1);
-		minRad = new Vector3(10,10,10);
+		minSphereRad = 1000;
+		minRad = new Vector3(minSphereRad, minSphereRad, minSphereRad);
 	}
 }

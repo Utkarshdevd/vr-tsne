@@ -34,26 +34,30 @@ public class MyPlayerController : MonoBehaviour {
 			transform.position = position;
 		}
 		else{
-			// Debug.Log("GOT RIFT/VR");
+			Debug.Log("GOT RIFT/VR");
 			string[] a = Input.GetJoystickNames();
 			for(int i = 0; i < a.Length; i++) {
       			Debug.Log(a[i]);
     		}
+			if(OVRInput.Get(OVRInput.Button.One)){
+				Debug.Log("Pressed");
+			}
 			// get input data from keyboard or controller
 			float moveHorizontal = Input.GetAxis("Horizontal");
-			float moveVertical = Input.GetAxis("Vertical");
-			// update player position based on input
-			Vector3 position = transform.position;
-			position.x += moveHorizontal * speed * Time.deltaTime;
-			position.z += moveVertical * speed * Time.deltaTime;
-			transform.position = position;
+            float moveVertical = Input.GetAxis("Vertical");
+            
+            // update player position based on input
+            Vector3 position = PointsParent.position;
+            position.x += moveHorizontal * speed * Time.deltaTime;
+            position.z += moveVertical * speed * Time.deltaTime;
+            PointsParent.position = position;
 		}
-		if (Input.GetKey(KeyCode.A)){
-      		PointsParent.Rotate(Vector3.up * speed * Time.deltaTime);
+		if (Input.GetButtonDown("Oculus_CrossPlatform_Button2")){
+      		PointsParent.Rotate(Vector3.up * speed * 100 * Time.deltaTime);
 		}
       
-		if (Input.GetKey(KeyCode.D))
-			PointsParent.Rotate(-Vector3.up * speed * Time.deltaTime);
+		if (Input.GetButtonDown("Oculus_CrossPlatform_Button4"))
+			PointsParent.Rotate(-Vector3.up * speed * 100 * Time.deltaTime);
 	}
 
 	void drawIt(List<DataPoint> dataPoints, Dictionary<string, int> labelDict){
