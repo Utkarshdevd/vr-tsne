@@ -34,6 +34,7 @@ public class MyPlayerController : MonoBehaviour {
 			transform.position = position;
 		}
 		else{
+			/*
 			Debug.Log("GOT RIFT/VR");
 			string[] a = Input.GetJoystickNames();
 			for(int i = 0; i < a.Length; i++) {
@@ -42,6 +43,7 @@ public class MyPlayerController : MonoBehaviour {
 			if(OVRInput.Get(OVRInput.Button.One)){
 				Debug.Log("Pressed");
 			}
+			*/
 			// get input data from keyboard or controller
 			float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
@@ -69,8 +71,10 @@ public class MyPlayerController : MonoBehaviour {
 			GameObject unit = Resources.Load("Prefabs/BasicSphere2") as GameObject;
 			// position it
 			GameObject newObj = Instantiate(unit, dp.GetVector(), new Quaternion(0,0,0,0));
-			newObj.GetComponent<BlockMat>().AddColor((float)(dp.GetFloatLabel()/labelDict.Count));
+			//newObj.GetComponent<BlockMat>().AddColor((float)(dp.GetFloatLabel()/labelDict.Count));
 			//newObj.GetComponent<Renderer>().sharedMaterial.color = new Color(0,(dp.GetFloatLabel()/labelDict.Count)*1,0,1.0f);
+			newObj.GetComponent<ChangeShaderGraphColor>().AddColor(dp.GetFloatLabel() / labelDict.Count);
+
 			newObj.transform.SetParent(PointsParent);
 		}
 	}

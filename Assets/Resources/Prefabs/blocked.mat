@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: blocked
-  m_Shader: {fileID: 4800000, guid: a4b5fb95179364e418507b1040ad800a, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0ca1325631c1521488cbb53729afc087, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -72,5 +72,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_158BDF36: {r: 0.8, g: 0.2, b: 0, a: 1}
+    - Color_CD91B206: {r: 0, g: 0.2, b: 0, a: 1}
+    - _Albedo_base: {r: 0, g: 0.6980392, b: 0, a: 0}
     - _Color: {r: 0, g: 0.2, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _glowColor: {r: 1, g: 0.6117801, b: 0, a: 0}
