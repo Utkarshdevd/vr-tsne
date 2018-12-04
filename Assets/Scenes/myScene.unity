@@ -386,6 +386,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   PointsParent: {fileID: 1747517028}
+  newMesh: {fileID: 4300080, guid: 2ba8c2547dbdc44219b641308dbb17eb, type: 3}
+  scale: 3
 --- !u!54 &2026331001
 Rigidbody:
   m_ObjectHideFlags: 0

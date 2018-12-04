@@ -6,6 +6,8 @@ public class MyPlayerController : MonoBehaviour {
 
     public int speed = 1;
 	public Transform PointsParent;
+	public Mesh newMesh;
+	public float scale;
 	void Awake(){
 		// add listners
 		Debug.Log("Called");
@@ -67,14 +69,24 @@ public class MyPlayerController : MonoBehaviour {
 		// PrintDict(labelDict);
 		Debug.Log(dataPoints.Count);
 		foreach(DataPoint dp in dataPoints){
-			// get current prefab
+
 			GameObject unit = Resources.Load("Prefabs/BasicSphere2") as GameObject;
+			if (newMesh != null)
+			{
+				unit.GetComponent<MeshFilter>().mesh = newMesh;
+				unit.transform.localScale = new Vector3(scale, scale, scale);
+			}
 			// position it
 			GameObject newObj = Instantiate(unit, dp.GetVector(), new Quaternion(0,0,0,0));
 			//newObj.GetComponent<BlockMat>().AddColor((float)(dp.GetFloatLabel()/labelDict.Count));
 			//newObj.GetComponent<Renderer>().sharedMaterial.color = new Color(0,(dp.GetFloatLabel()/labelDict.Count)*1,0,1.0f);
 			newObj.GetComponent<ChangeShaderGraphColor>().AddColor(dp.GetFloatLabel() / labelDict.Count);
 
+			if (Constants.Instance.sphere)
+			{
+				newObj.transform.LookAt(PointsParent.position - dp.GetVector());
+				newObj.transform.rotation *= Quaternion.Euler(90, 0, 0);
+			}
 			newObj.transform.SetParent(PointsParent);
 		}
 	}

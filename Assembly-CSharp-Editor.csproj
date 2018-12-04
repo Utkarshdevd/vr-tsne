@@ -85,12 +85,6 @@
     <Compile Include="Assets\Oculus\VR\Editor\OVRPluginUpdaterStub.cs" />
     <Compile Include="Assets\Oculus\VR\Editor\OVRScreenshotWizard.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Editor\OVRManagerEditor.cs" />
-    <Compile Include="Assets\Parabox Primitives\Editor\CustomEditors\ParaboxConeEditor.cs" />
-    <Compile Include="Assets\Parabox Primitives\Editor\CustomEditors\ParaboxCubeEditor.cs" />
-    <Compile Include="Assets\Parabox Primitives\Editor\CustomEditors\ParaboxCylinderEditor.cs" />
-    <Compile Include="Assets\Parabox Primitives\Editor\CustomEditors\ParaboxPlaneEditor.cs" />
-    <Compile Include="Assets\Parabox Primitives\Editor\CustomEditors\ParaboxPrismEditor.cs" />
-    <Compile Include="Assets\Parabox Primitives\Editor\InteractivePrimitiveEditor.cs" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <Reference Include="Assembly-UnityScript">
       <HintPath>C:/Users/Libraries MakerSpace/Documents/GitHub/vr-tsne/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
