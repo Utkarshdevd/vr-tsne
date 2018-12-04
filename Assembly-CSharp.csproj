@@ -300,6 +300,14 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
+    <Compile Include="Assets\Parabox Primitives\Classes\InteractivePrimitive.cs" />
+    <Compile Include="Assets\Parabox Primitives\Classes\InteractivePrimitivesMath.cs" />
+    <Compile Include="Assets\Parabox Primitives\Enum\InteractivePrimitiveEnum.cs" />
+    <Compile Include="Assets\Parabox Primitives\MonoBehaviours\InteractiveCone.cs" />
+    <Compile Include="Assets\Parabox Primitives\MonoBehaviours\InteractiveCube.cs" />
+    <Compile Include="Assets\Parabox Primitives\MonoBehaviours\InteractiveCylinder.cs" />
+    <Compile Include="Assets\Parabox Primitives\MonoBehaviours\InteractivePlane.cs" />
+    <Compile Include="Assets\Parabox Primitives\MonoBehaviours\InteractivePrism.cs" />
     <Compile Include="Assets\Scripts\BlockMat.cs" />
     <Compile Include="Assets\Scripts\ChangeShaderGraphColor.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
@@ -336,6 +344,7 @@
     <None Include="Assets\Oculus\Avatar\Samples\CrossPlatform\Readme.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_SingleComponent.shader" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarMaterialStateShader.cginc" />
+    <None Include="Assets\Parabox Primitives\README.txt" />
     <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShader.shader" />
     <None Include="Assets\Oculus\VR\Resources\Underlay Impostor.shader" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
@@ -344,6 +353,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>C:/Users/Libraries MakerSpace/Documents/GitHub/vr-tsne/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>C:/Users/Libraries MakerSpace/Documents/GitHub/vr-tsne/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Libraries MakerSpace/Documents/GitHub/vr-tsne/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

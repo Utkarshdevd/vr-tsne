@@ -426,4 +426,4 @@ MonoBehaviour:
   origin: {x: 0, y: 0, z: 0}
   minRad: {x: 2, y: 2, z: 2}
   minSphereRad: 100
-  sphere: 1
+  sphere: 0
