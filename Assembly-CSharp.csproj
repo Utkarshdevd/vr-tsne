@@ -305,6 +305,7 @@
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\DataPoint.cs" />
     <Compile Include="Assets\Scripts\MyPlayerController.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript1.cs" />
     <Compile Include="Assets\Scripts\Reader.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarMaterialStateShader.cginc" />
