@@ -70,7 +70,7 @@ public class MyPlayerController : MonoBehaviour {
 		Debug.Log(dataPoints.Count);
 		foreach(DataPoint dp in dataPoints){
 
-			GameObject unit = Resources.Load("Prefabs/BasicSphere2") as GameObject;
+			GameObject unit = Resources.Load("Prefabs/BasicSphere_2") as GameObject;
 			if (newMesh != null)
 			{
 				unit.GetComponent<MeshFilter>().mesh = newMesh;

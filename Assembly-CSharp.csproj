@@ -304,6 +304,7 @@
     <Compile Include="Assets\Scripts\ChangeShaderGraphColor.cs" />
     <Compile Include="Assets\Scripts\Constants.cs" />
     <Compile Include="Assets\Scripts\DataPoint.cs" />
+    <Compile Include="Assets\Scripts\mouse.cs" />
     <Compile Include="Assets\Scripts\MyPlayerController.cs" />
     <Compile Include="Assets\Scripts\Reader.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
